@@ -1,0 +1,323 @@
+.main {
+    margin-top: 5rem;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.container {
+    padding: 0px 0 64px 0;
+    margin-bottom: 3rem;
+    height: 80vh;
+    position: relative;
+    padding: 0px 0px;
+    height: 82vh;
+}
+
+.mainfront {
+    background-image: url('/mainFront.jpeg');
+    min-height: 100vh;
+    min-width: 90vw;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: ellipse(90rem 50% at 48% 33%);
+    clip-path: ellipse(90rem 50% at 48% 33%);
+}
+
+.mainNameContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 0 0 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 10% auto 0;
+    padding: 0 0;
+    bottom: 1%;
+}
+
+.mainName {
+    white-space: pre-line !important;
+    font-size: 52px;
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+    font-size: 48px;
+    margin-top: 16px;
+    width: 50%;
+}
+
+.color1 {
+    position: absolute;
+    top: 98%;
+    left: 35%;
+    box-shadow: 20px -18px 75px 58px #1d3434f2;
+    width: 150px;
+    height: 110px;
+    background: #1d3434f2;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-filter: blur(25px);
+    filter: blur(25px);
+
+}
+
+.color2 {
+    position: absolute;
+    top: 98%;
+    left: 48%;
+    box-shadow: 20px -18px 75px 58px #3bc0aa;
+    width: 150px;
+    height: 110px;
+    background: #3bc0aa;
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-filter: blur(25px);
+    filter: blur(25px);
+}
+
+.conContainer {
+    padding: 45px 0 64px 0;
+    height: auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.conContainerInner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.conContainerInnerbody {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-flex-basis: 43%;
+    -ms-flex-preferred-size: 43%;
+    flex-basis: 43%;
+    white-space: pre-line;
+}
+
+.conContainerInnerImg {
+    height: 263px;
+    position: relative;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.rightSideImg {
+    border-radius: inherit;
+    height: 86%;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.conContainerInnerRightImg {
+    height: 263px;
+    position: relative;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.dumCont {
+    font-size: 30px;
+    width: 82%;
+    font-weight: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dumCont:nth-last-of-type(1) {
+    margin-block-end: 0;
+}
+
+.icoCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+}
+
+.icoContInner {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.pngFor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+}
+
+.involed {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 960px;
+    padding: 64px 24px;
+    width: calc(100% - 64px);
+}
+
+.headingtoo {
+    font-weight: 700;
+    font-size: 48px;
+    max-width: 632px;
+    line-height: 56px;
+    text-align: center;
+    margin: 0 auto 32px auto;
+}
+
+.btntoo {
+    cursor: pointer;
+    padding: 10px 25px;
+    white-space: nowrap;
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    background: #1d3434f2;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.cities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 82px;
+    column-gap: 20px;
+}
+
+.cities div img {
+    border-radius: 3px;
+}
+
+.aboutText {
+    margin-bottom: 0px;
+    padding: 45px 0 0 0;
+}
+
+.buttonApply {
+    cursor: pointer;
+    padding: 10px 10px;
+    line-height: 16px;
+    white-space: nowrap;
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    background: #1d3434f2;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    height: 20px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .conContainer {
+        height: auto;
+    }
+    
+    .cities {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 60px;
+    }
+
+    .conContainerInner {
+        flex-direction: column-reverse;
+        padding: 0 10px;
+    }
+
+    .forCol {
+        flex-direction: column;
+    }
+
+    .mainfront {
+        min-height: 54vh;
+        clip-path: ellipse(60rem 48% at 48% 33%);
+    }
+
+    .container {
+        height: 45vh;
+        margin-bottom: 0rem;
+    }
+
+    .mainNameContainer {
+        bottom: 8%;
+    }
+
+    .mainName {
+        font-size: 29px;
+        margin-top: 32px;
+        line-height: 30px;
+    }
+}
+
+.loader {
+    width: 85px;
+    border-radius: 50%;
+    height: 86px;
+    border: 5px solid #c4bfbfa6;
+    border-top-color: #1d3434f2;
+    animation: rotateLoader 1s ease-in-out infinite;
+}
+
+@media screen and (max-width: 450px){
+
+}
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
