@@ -1,9 +1,14 @@
-
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './navbar.module.css'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
+    const path = usePathname();
+    if(path.startsWith('/dashboard')){
+        return null;
+    }
 
     return (
         <footer className={styles.footer}>
