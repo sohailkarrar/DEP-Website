@@ -384,7 +384,7 @@ function ApplicationForm() {
                     </div>
                 </div>
 
-                <button type="submit" className={styles.submitButton}>Apply Now</button>
+                <button type="submit" disabled={loading} style={{backgroundColor:(loading ? 'green' : '')}} className={styles.submitButton}>{loading ? 'Applying....' :'Apply Now'}</button>
             </form>
         </div>
     );
