@@ -13,7 +13,6 @@ export default function Home() {
         <div className={styles.mainNameContainer}>
           <h1 className={styles.mainName}>
             A Future of Empowerment Pakistan
-            
           </h1>
         </div>
       </div>
