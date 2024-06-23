@@ -1,0 +1,41 @@
+/* page.module.css */
+.container {
+    margin-top: 120px !important;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.imageContainer {
+    margin-bottom: 30px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.note {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #999;
+}

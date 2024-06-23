@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './navbar.module.css'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
     function navShow() {
@@ -24,10 +25,12 @@ export default function Navbar() {
                 nav.style.display = "none";
             }
         });
-
-
-
     }
+    const path = usePathname();
+    if(path.startsWith('/dashboard')){
+        return null;
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.main}>
@@ -55,11 +58,14 @@ export default function Navbar() {
                             Offers
                         </Link>
                     </div>
-                    <div className={styles.login}>
-                        <Link className={styles.buttonApply} href="/apply">
-                            Apply Now
-                        </Link>
-                    </div>
+                    {
+                        !path.startsWith('/app-form') && 
+                        <div className={styles.login}>
+                            <Link className={styles.buttonApply} href="/apply">
+                                Apply Now
+                            </Link>
+                        </div>
+                    }
                 </ul>
             </div>
         </header>

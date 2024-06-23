@@ -1,0 +1,90 @@
+/* styles/page.module.css */
+
+.container {
+    margin-top: 120px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.section:hover {
+    box-shadow: 1px 1px 4px #0c259f77;
+}
+
+.section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 1px 1px 4px #7777;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input, .textarea {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.radioGroup, .checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkboxItem{
+    padding: 2px 5px;
+}
+
+.radioInput, .checkboxInput {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radioLabel, .checkboxLabel {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    font-size: 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.error{
+    color: red;
+    font-size: small;
+    padding: 2px auto;
+    text-align: center;
+}

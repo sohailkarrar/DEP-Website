@@ -92,11 +92,6 @@ export default async function mongodb(e) {
                 console.log('inserted data into database');
             }
 
-
-            // console.log('Unable to connect to MongoDB Atlas');
-            // console.error(err);
-
-
         }
         catch (err) {
             console.error(err)
