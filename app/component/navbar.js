@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
