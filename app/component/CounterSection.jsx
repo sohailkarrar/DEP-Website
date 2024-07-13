@@ -26,7 +26,7 @@ const Counter = ({ endValue, duration, label }) => {
 
     return (
         <div ref={ref} className={styles.count_item}>
-            <h2>{count}</h2>
+            <h2>{count}+</h2>
             <p>{label}</p>
         </div>
     );
