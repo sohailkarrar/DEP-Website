@@ -1,0 +1,89 @@
+.citySection{
+    max-width:1069.89px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cityHeadings{
+    margin-top: 60px;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+}
+.cityPara{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    max-width: 550px;
+    width: 80%;
+    margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
+}
+@media screen and (max-width:600px){
+    .cityPara{
+        font-size: 22px;
+    }
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+@media screen and (max-width:800px) {
+    .gridContainer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .gridItem{
+        width: 45%;
+        min-width: 150px;
+    }
+}
+
+.gridItem {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+
+.gridItem img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.gridItem p {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.gridItem::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #3CC3D1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.gridItem:hover {
+    transform: translateY(-5px);
+}
+

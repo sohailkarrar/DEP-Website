@@ -1,0 +1,112 @@
+.secondsection {
+    padding: 20px;
+    text-align: center;
+}
+
+.headings {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonialheading {
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+}
+
+.testimonialSection {
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialContent {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blockquote {
+    font-size: 1.25em;
+    color: #333;
+    margin: 0;
+    position: relative;
+    padding: 20px;
+}
+
+.blockquote::before,
+.blockquote::after {
+    content: '"';
+    font-size: 3em;
+    color: #007BFF;
+    position: absolute;
+    top: -10px;
+}
+
+.blockquote::before {
+    left: -30px;
+}
+
+.blockquote::after {
+    margin-top: 90px;
+    right: -30px;
+}
+
+@media screen and (max-width:700px) {
+    .blockquote::after{
+        margin-top: 120px;
+    }
+}
+@media screen and (max-width:600px) {
+    .blockquote::after{
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width:500px) {
+    .blockquote::after{
+        margin-top: 180px;
+    }
+}
+@media screen and (max-width:400px) {
+    .blockquote::after{
+        margin-top: 200px;
+    }
+}
+
+.cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    color: #666;
+}
+
+.cite strong {
+    display: block;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.testimonialNavigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonialNavigation img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.testimonialNavigation img:hover {
+    transform: scale(1.1);
+}
+
+.testimonialNavigation img.active {
+    border: 3px solid #007BFF;
+    transform: scale(1.4);
+}
