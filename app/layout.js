@@ -1,6 +1,7 @@
 import Navbar from './component/navbar';
 import './component/navbar.module.css';
 import './globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Inter } from 'next/font/google';
 import Footer from './component/footer';
 import { Analytics } from "@vercel/analytics/react";
