@@ -1,0 +1,321 @@
+.page2Container {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.page2Body {
+    overflow-x: hidden;
+    min-height: 1000px;
+}
+
+.page2Navbar {
+    margin-top: 20px;
+    max-width: 1134px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page2Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.page2Logo {
+    max-height: 49px;
+    margin-top: 4px;
+}
+
+.page2Items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.page2Navbar li {
+    margin: 16px;
+    cursor: pointer;
+}
+
+#page2SearchIcon {
+    max-height: 23px;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-right: 19px;
+}
+
+.page2Signup {
+    display: flex;
+    flex-direction: row;
+}
+
+.page2CreateAccount {
+    background-color: #ecf9fb;
+    border-radius: 6px;
+    border: none;
+    margin-right: 5px;
+    font-weight: bolder;
+    color: black;
+    font-size: 15px;
+    width: 160px;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.page2CreateAccount:hover {
+    background-color: #c7dee2;
+}
+
+.page2SignIn {
+    background-color: #3cc3d1;
+    border-radius: 8px;
+    color: white;
+    width: 105px;
+    font-size: 15px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.page2SignIn:hover {
+    background-color: rgb(13, 107, 107);
+}
+
+.page2New {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: -30px;
+}
+
+.page2Circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    color: white;
+    z-index: 1;
+}
+
+.page2New p {
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 70px;
+}
+
+#page2Circle1 {
+    margin-left: 109px;
+    background-color: #006abf;
+}
+
+#page2Circle2 {
+    margin-left: 50px;
+}
+
+#page2Circle3 {
+    margin-left: 50px;
+}
+
+.page2PersonalInfo {
+    padding: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #eef1f6;
+    border-radius: 0;
+    position: relative;
+    z-index: 0;
+    max-width: 100%;
+}
+
+.page2Form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 716px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.page2PersonalInfo label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.page2PersonalInfo input[type="text"],
+.page2PersonalInfo input[type="tel"],
+.page2PersonalInfo input[type="number"],
+.page2PersonalInfo input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px none #ccc;
+    border-radius: 0;
+    outline: none;
+}
+
+.page2PersonalInfo input[type="radio"] {
+    margin-left: 10px;
+}
+
+.page2PersonalInfo label[for="checkbox"] {
+    margin-top: 15px;
+}
+
+.page2File {
+    margin-top: 20px;
+    background-color: #eef1f6;
+    min-height: 30px;
+}
+
+.page2Row {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.page2Row label {
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.page2Option {
+    margin-top: 14px;
+}
+
+.page2Takephoto {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.page2Takephoto label {
+    margin-top: 10px;
+    padding: 10px 30px;
+    border:1px solid #006abf !important;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.page2Takephoto label:hover {
+    box-shadow: 4px 4px 5px #7777;
+    background-color: #006abf22;
+}
+
+.page2LabelText {
+    cursor: pointer;
+}
+
+.page2File h3 {
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 55px;
+    padding-top: 10px;
+}
+
+.page2FasFaDownload {
+    font-size: 18px;
+    color: #006abf;
+    font-weight: bold;
+}
+
+.page2ForButton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page2Button {
+    background-color: #006abf;
+    color: white;
+    width: 52%;
+    height: 48px;
+    font-size: larger;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.page2File {
+    color: #006abf;
+    padding-top: 20px;
+}
+
+.page2File #page2File {
+    border: 1px solid black;
+    margin-left: -70%;
+    min-height: 38px;
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.page2File #page2File i {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .page2Form {
+        width: 90%; 
+    }
+
+    .page2New {
+        flex-direction: column;
+    }
+
+    .page2New p {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .page2Circle {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #page2Circle1 {
+        margin-left: 0;
+    }
+
+    #page2Circle2,
+    #page2Circle3 {
+        margin-left: 0;
+    }
+
+    .page2PersonalInfo {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page2Form {
+        width: 100%; 
+    }
+
+    .page2Circle {
+        display: none; 
+    }
+
+    .page2New p {
+        margin-bottom: 10px;
+    }
+}
