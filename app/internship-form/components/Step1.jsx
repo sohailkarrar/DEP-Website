@@ -17,7 +17,7 @@ const Step1 = ({setStep}) => {
                     <h4 className={styles.page1HeadingFourthOne}>PAVE YOUR WAY TO A FUTURE OF OPPORTUNITIES!</h4>
                     <br />
                     <br />
-                    <p>Welcome to the Digital Empowerment Pakistan <b>4-Week Virtual Internship Program (July 2024-Batch 02)</b> tailored for <b>BBA Students!</b></p>
+                    <p>Welcome to the Digital Empowerment Pakistan <b>4-Week Virtual Internship Program (July 2024-Batch 02)</b> tailored for <b>Undergraduate Students!</b></p>
                     <br />
                     <p>"Digital Empowerment Pakistan (DEP) is a non-profit organization dedicated to bridging the digital divide and empowering Pakistani youth. DEP aims to enhance youth empowerment through digital literacy, leadership development, and academic growth. DEP's initiatives focus on providing digital skills training, scholarship guidance, and leadership development opportunities to Pakistani youth."</p>
                     <br />

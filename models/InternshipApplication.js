@@ -25,6 +25,10 @@ const InternshipApplicationSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    field: {
+        type: String,
+        required: true
+    },
     whatsappNumber: {
         type: String,
         required: true

@@ -5,19 +5,61 @@ import 'react-phone-number-input/style.css';
 import styles from './Step2.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
-const Step2 = ({ setStep }) => {
+const Step2 = ({ setStep,data,setData }) => {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const [imagePreview, setImagePreview] = useState(null);
+    const [image,setImage] = useState(null);
+    const [isLoading,setIsLoading] = useState(false);
 
-    const onSubmit = (data) => {
-        console.log(data);
-        setStep(prev => prev + 1);
+    const onSubmit = async(data) => {
+        try {
+            setIsLoading(true);
+            const img  = await uploadImage(image);
+            const finalData = {
+                fullName:data.name,
+                email:data.email,
+                gender:data.gender,
+                cnicOrPassportNumber:data.cnic,
+                whatsappNumber:data.contact,
+                picture:img,
+                country:data.nationality
+            }
+            setData(finalData);
+            setStep(prev => prev + 1);
+        } catch (error) {
+            console.log(error);
+            toast.error('Error taking in data',{position:'top-right'});
+        } finally {
+            setIsLoading(false);
+        }
     };
+
+    const uploadImage = async(image)=>{
+        if(!image){
+            toast.warn('Please enter an image!',{position:'top-right'});
+            return;
+        }
+        const formData = new FormData();
+        formData.append('image',image);
+        try {
+            const resp = await axios.post('/api/uploadImage',formData);
+            if(resp){
+                return resp?.data?.image?.url ?? '';
+            }
+        } catch (error) {
+            toast.error(error?.response?.data?.message ?? "Error uploading image",{position:'top-right'});
+            console.log(error);
+            return '';
+        }
+    }
 
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         if (file) {
+            setImage(file);
             const reader = new FileReader();
             reader.onloadend = () => {
                 setImagePreview(reader.result);
@@ -154,7 +196,7 @@ const Step2 = ({ setStep }) => {
                     )}
                 </div>
                 <div className={styles.page2ForButton}>
-                    <button type="submit" className={styles.page2Button}>Next</button>
+                    <button type="submit" className={styles.page2Button}>{isLoading ? 'Loading...' : "Next"}</button>
                 </div>
             </form>
         </div>

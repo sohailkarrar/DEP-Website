@@ -23,68 +23,6 @@
     width: 100%;
 }
 
-.log {
-    max-height: 49px;
-    margin-top: 4px;
-}
-
-.items {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-.navbar li {
-    margin: 16px;
-    cursor: pointer;
-}
-
-#search-icon {
-    max-height: 23px;
-    cursor: pointer;
-    margin-top: 18px;
-    margin-right: 19px;
-}
-
-.signup {
-    display: flex;
-    flex-direction: row;
-}
-
-.create_account {
-    background-color: #ecf9fb;
-    border-radius: 6px;
-    border: none;
-    margin-right: 5px;
-    font-weight: bolder;
-    color: black;
-    font-size: 15px;
-    width: 160px;
-    cursor: pointer;
-    height: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.create_account:hover {
-    background-color: #c7dee2;
-}
-
-.sign-in {
-    background-color: #3cc3d1;
-    border-radius: 8px;
-    color: white;
-    width: 105px;
-    font-size: 15px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.9s ease;
-}
-
-.sign-in:hover {
-    background-color: rgb(13, 107, 107);
-}
-
 .new {
     margin-top: 50px;
     display: flex;
@@ -103,7 +41,7 @@
     align-items: center;
     height: 35px;
     width: 35px;
-    margin-top: 20px;
+    margin-top: 5px;
     background-color: #006abf;
     border-radius: 50%;
     color: white;
@@ -132,12 +70,27 @@
 .query,
 .Agreement {
     display: flex;
-    margin-top: 20px;
-    width: 53%;
+    width: 100%;
     background-color: #eef1f6;
-    margin-left: 28.5%;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 0;
+}
+
+.selectFiled{
+    width: 100%;
+    font-size: 18px;
+    color: #777;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.otherInput{
+    border: none;
+    border-bottom: 1px solid #777;
+    width: 80%;
+    padding: 4px 10px;
+    outline: none;
 }
 
 .content,

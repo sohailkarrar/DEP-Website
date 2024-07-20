@@ -3,14 +3,15 @@ import { useForm } from 'react-hook-form';
 import styles from './Step3.module.css'; // CSS Modules
 import { toast } from 'react-toastify';
 
-const Step3 = ({setStep}) => {
+const Step3 = ({setStep,data,setData}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => {
-        if (!data.institute || !data.field || !data.studyYear || !/^\d{4}$/.test(data.studyYear)) {
+    const onSubmit = async(data) => {
+        if (!data.institute || !data.field || !data.studyYear) {
             toast.warn('Please fill out the form correctly!',{position:'top-right'});
             return;
         }
+        setData(prev => ({...prev, university:data.institute,field:data.filed,currentYearOrSemester:data.studyYear }));
         setStep(prev=>prev+1);
     };
 
@@ -45,17 +46,13 @@ const Step3 = ({setStep}) => {
                     />
                     {errors.field && <p>{errors.field.message}</p>}
                     
-                    <label htmlFor="studyYear">Year of Completion</label>
+                    <label htmlFor="studyYear">Enter your current Semester or Study Year</label>
                     <input
                         id="studyYear"
                         type="text"
-                        placeholder="Enter Year of Completion"
+                        placeholder="Enter Year/Semester"
                         {...register('studyYear', {
-                            required: 'Please enter your year of completion',
-                            pattern: {
-                                value: /^\d{4}$/,
-                                message: 'Please enter a valid 4-digit year'
-                            }
+                            required: 'Please enter your year/semester'
                         })}
                     />
                     {errors.studyYear && <p>{errors.studyYear.message}</p>}
