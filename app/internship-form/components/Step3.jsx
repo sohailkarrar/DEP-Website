@@ -11,7 +11,7 @@ const Step3 = ({setStep,data,setData}) => {
             toast.warn('Please fill out the form correctly!',{position:'top-right'});
             return;
         }
-        setData(prev => ({...prev, university:data.institute,field:data.filed,currentYearOrSemester:data.studyYear }));
+        setData(prev => ({...prev, university:data.institute,highestAcademicQualification:data.field,currentYearOrSemester:data.studyYear }));
         setStep(prev=>prev+1);
     };
 

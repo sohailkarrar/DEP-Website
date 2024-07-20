@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form';
 import styles from './Step4.module.css'; // Import the CSS module
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/navigation';
+
 
 const availableOptions = [
     {
@@ -29,13 +33,43 @@ const Step4 = ({ setStep, data, setData }) => {
     const [availableDomains, setAvailableDomains] = useState(availableOptions[0].domains);
     const [resume, setResume] = useState(null);
     const [resumeFileName, setResumeFileName] = useState('');
+    const [isLoading,setIsLoading] = useState(false);
+    const router = useRouter()
 
     const onSubmit = async (newData) => {
         if (!newData.agreement) {
             alert('Please agree to terms and conditions');
             return;
         }
-        console.log(newData);
+        if(!resume){
+            toast.warn('Please select a resume',{position:'top-right'});
+            return;
+        }
+        setIsLoading(true);
+        try {
+            const resumeUrl = await uploadResume(resume);
+            const finalData = {
+                ...data,
+                preferredInternshipDomain:newData.domain,
+                whereDidYouHear: newData.heard === "Others" ? newData.heard_other: newData.heard,
+                queryOrSuggestion: newData.query,
+                reference:newData.reference,
+                resume:resumeUrl,
+                batchNumber:'3'
+            };
+            console.log(finalData);
+            const resp = await axios.post('/api/internship/create',finalData);
+            if(resp){
+                toast.success('Successfully Submitted the Application!',{position:'top-right'});
+                router.push('/thanks-app');
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error(error?.response?.data?.message ?? "Error submitting Application",{position:'top-right'});
+            router.push('/');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const uploadResume = async (resume) => {
@@ -119,7 +153,7 @@ const Step4 = ({ setStep, data, setData }) => {
                     <div className={styles.content3}>
                         <h3>Upload Your CV:</h3>
                         <label htmlFor="file-upload" className={styles.upload_btn}>
-                            <i className="fa fa-cloud-upload-alt"></i> Add File
+                            <FontAwesomeIcon icon={faUpload} /> Add File
                             <input
                                 type="file"
                                 multiple={false}
@@ -130,8 +164,8 @@ const Step4 = ({ setStep, data, setData }) => {
                         </label>
                         {resumeFileName && (
                             <div className={styles.file_name}>
-                                <h4>Uploaded CV:</h4>
-                                <p>{resumeFileName}</p>
+                                <h4 style={{fontSize:'18px',color:'#777',display:'inline'}} >Uploaded CV:</h4>
+                                <span style={{fontSize:'18px',color:'#333',display:'inline',padding:'0px 10px'}} >{resumeFileName}</span>
                             </div>
                         )}
                     </div>
@@ -158,7 +192,7 @@ const Step4 = ({ setStep, data, setData }) => {
                     </div>
                 </div>
                 <div className={styles.for_button}>
-                    <button type="submit" className={styles.btton}>Submit</button>
+                    <button type="submit" disabled={isLoading} style={{backgroundColor:(isLoading ? 'green' : '')}} className={styles.btton}>{isLoading? 'Loading...' : 'Submit'}</button>
                 </div>
             </form>
         </div>

@@ -2,18 +2,18 @@ import connectDb from "@/mongoDb/connectDb";
 import internshipApplicationSchema from "@/validations/InternshipApplicationValidator";
 import { NextResponse } from "next/server";
 import InternshipApplication from "@/models/InternshipApplication";
-
+import z from 'zod';
 
 export async function POST(request) {
     try {
         await connectDb();
         const data = await request.json();
         const validatedData = internshipApplicationSchema.parse(data);
-        const oldExists = await InternshipApplication.find({email:validatedData.email, batchNumber:validatedData.batchNumber, preferredInternshipDomain:validatedData.preferredInternshipDomain});
+        // const oldExists = await InternshipApplication.find({email:validatedData.email, batchNumber:String.toString(validatedData.batchNumber), preferredInternshipDomain:validatedData.preferredInternshipDomain});
 
-        if(oldExists){
-            return NextResponse.json({ success: false, message: "Application already found in this domain!" }, { status: 409 });
-        }
+        // if(oldExists){
+        //     return NextResponse.json({ success: false, message: "Application already found in this domain!" }, { status: 409 });
+        // }
 
         const newApplication = new InternshipApplication(validatedData);
         await newApplication.save();

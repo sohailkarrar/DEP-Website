@@ -8,7 +8,7 @@ import Step4 from './components/Step4'
 
 
 const InternshipForm = () => {
-    const [step,setStep] = useState(4);
+    const [step,setStep] = useState(1);
     const [data,setData] = useState({});
 
     useEffect(()=>{

@@ -6,7 +6,6 @@ const internshipApplicationSchema = z.object({
     gender: z.enum(["Male", "Female", "Other"], "Gender must be Male, Female, or Other"),
     country: z.string().min(1, "Country is required"),
     university: z.string().min(1, "University/College is required"),
-    field: z.string().min(1, "Filed of Study is required"),
     whatsappNumber: z.string().min(1, "WhatsApp number is required"),
     cnicOrPassportNumber: z.string().min(1, "CNIC or Passport Number is required"),
     picture: z.string().url("Invalid URL for picture"),

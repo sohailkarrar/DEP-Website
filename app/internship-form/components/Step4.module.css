@@ -186,21 +186,23 @@
     margin-top: 5px;
 }
 
-.upload-btn {
+.upload_btn {
     cursor: pointer;
     background-color: #d8ebee;
-    border: 1px solid #c7dee2;
+    border: 1px solid #006abf !important;
     color: #006abf;
     border-radius: 5px;
     padding: 15px 25px;
     display: inline-block;
+    max-width: 200px;
+    transition: all .3s ease;
 }
 
-.upload-btn i {
+.upload_btn i {
     margin-right: 5px;
 }
 
-.for-button {
+.for_button {
     text-align: center;
     margin-top: 20px;
     width: 53%;

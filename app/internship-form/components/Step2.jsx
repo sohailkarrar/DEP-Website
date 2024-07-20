@@ -196,7 +196,7 @@ const Step2 = ({ setStep,data,setData }) => {
                     )}
                 </div>
                 <div className={styles.page2ForButton}>
-                    <button type="submit" className={styles.page2Button}>{isLoading ? 'Loading...' : "Next"}</button>
+                    <button type="submit" disabled={isLoading} style={{backgroundColor:(isLoading ? 'green' : '')}} className={styles.page2Button}>{isLoading ? 'Loading...' : "Next"}</button>
                 </div>
             </form>
         </div>
