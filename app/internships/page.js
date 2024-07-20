@@ -3,9 +3,11 @@
 import { redirect } from 'next/dist/server/api-utils'
 import styles from './page.module.css'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 
 export default function Home() {
+    const router = useRouter();
 
     function openForm(uri) {
         console.log("openForm : ", uri)
@@ -28,6 +30,9 @@ export default function Home() {
                         <Image className={styles.rightSideImg} src={"/intern.jfif"} width={480} height={263} alt='img' />
                     </div>
                 </div>
+            </div>
+            <div className={styles.realApplyCont} >
+                <button onClick={()=>router.push('/internship-form')} >Apply for Internship Now</button>
             </div>
             <div className={[styles.conContainer, styles.aboutText].join("")}>
                 <div style={{ display: 'block' }} className={styles.conContainerInner}>

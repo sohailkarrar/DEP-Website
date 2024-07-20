@@ -5,6 +5,34 @@
     overflow: auto;
 }
 
+
+.realApplyCont{
+    width: 100%;
+    background: #A9BDD9;
+    min-height: 40vh;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.realApplyCont > button{
+    font-size: 22px;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background: #fff;
+    border: none;
+    outline: none;
+    transition: all .22s ease;
+}
+
+.realApplyCont > button:hover{
+    transform: translateX(-2px) translateY(-2px);
+    background-color: #3bc0aa;
+    color: #fff;
+    box-shadow: 3px 3px 5px #7777;
+}
+
 .container {
     padding: 0px 0 64px 0;
     margin-bottom: 3rem;

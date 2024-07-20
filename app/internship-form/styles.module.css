@@ -1,0 +1,21 @@
+.internshipForm {
+    margin-top: 100px;
+    min-height: 100vh;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.internshipForm h3 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.internshipForm .form-group {
+    margin-bottom: 15px;
+}
+
+.internshipForm .btn {
+    margin-right: 10px;
+}

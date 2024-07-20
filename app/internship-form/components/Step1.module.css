@@ -1,0 +1,215 @@
+.page1Container {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page1Body {
+    background-color: #f9fafc;
+    min-height: 1600px;
+}
+
+.page1Navbar {
+    margin-top: 40px;
+    max-width: 1134px;
+    height: 59px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page1Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page1Logo {
+    max-height: 49px;
+    margin-top: 4px;
+}
+
+.page1Items {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    list-style: none;
+}
+
+.page1Navbar li {
+    margin: 16px;
+    cursor: pointer;
+}
+
+.page1SearchIcon {
+    max-height: 23px;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-right: 19px;
+}
+
+.page1Signup {
+    display: flex;
+    flex-direction: row;
+}
+
+.page1CreateAccount {
+    background-color: #ecf9fb;
+    border-radius: 6px;
+    border: none;
+    margin-right: 5px;
+    font-weight: bolder;
+    color: black;
+    font-size: 15px;
+    width: 160px;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.page1CreateAccount:hover {
+    background-color: #c7dee2;
+}
+
+.page1SignIn {
+    background-color: #3cc3d1;
+    border-radius: 8px;
+    color: white;
+    width: 105px;
+    font-size: 15px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.page1SignIn:hover {
+    background-color: rgb(13, 107, 107);
+}
+
+.page1Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 52%;
+    background-color: #eef1f6;
+    border-radius: 0;
+}
+
+.page1Content {
+    margin-left: 20px;
+}
+
+.page1Content ul {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.page1Content a {
+    font-size: 15px;
+    line-height: 0.6;
+    color: #09aacd;
+}
+
+.page1Content a:hover {
+    color: #006f8e; 
+}
+
+.page1Content li {
+    font-size: 15px;
+    line-height: 0.8;
+    margin-left: 0;
+    margin: 5px 0;
+}
+
+.page1Content p {
+    margin: 5px 0;
+    line-height: 1.25;
+    font-size: 16px;
+}
+
+.page1Content h2 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 24px;
+    margin-top: 22px;
+}
+
+.page1HeadingFourthOne {
+    text-align: center;
+}
+
+.page1ForButton {
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 50px;
+}
+
+.page1Button {
+    background-color: #006abf;
+    color: white;
+    width: 52%;
+    height: 48px;
+    font-size: larger;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .page1Navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .page1Nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .page1Items {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .page1Navbar li {
+        margin: 8px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .page1Signup {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .page1CreateAccount,
+    .page1SignIn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .page1Form {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    .page1Button {
+        width: 90%;
+        height: 40px;
+        font-size: medium;
+    }
+}
